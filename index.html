@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pembayaran ke Diax</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1d3557, #457b9d);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background: #f8f9fa;
+      color: #333;
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .payment-method {
+      margin-bottom: 20px;
+    }
+    .method-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .info {
+      background: #e9ecef;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .info:hover {
+      background: #dfe4ea;
+    }
+    .qris {
+      text-align: center;
+    }
+    .qris img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 30px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Metode Pembayaran</h1>
+
+    <div class="payment-method">
+      <div class="method-title">DANA</div>
+      <div class="info" onclick="copyToClipboard('081519713722')">
+        081519713722<br/>A/N: DIAX MAWXXXXX POHXX
+      </div>
+    </div>
+
+    <div class="payment-method">
+      <div class="method-title">GOPAY</div>
+      <div class="info" onclick="copyToClipboard('081519713722')">
+        081519713722<br/>A/N: DIAX MAWXXXXX POHXX
+      </div>
+    </div>
+
+    <div class="payment-method">
+      <div class="method-title">OVO</div>
+      <div class="info" onclick="copyToClipboard('0895327307789')">
+        0895327307789<br/>A/N: DIAX MAWXXXXX POHXX
+      </div>
+    </div>
+
+    <div class="payment-method qris">
+      <div class="method-title">QRIS (Semua e-wallet & Bank)</div>
+      <p>A/N: TOKO RESMING</p>
+      <img src="https://img1.pixhost.to/images/6309/608193916_fr3hosting.jpg" alt="QRIS">
+    </div>
+
+    <div class="footer">
+      Klik nomor untuk menyalin ke clipboard
+    </div>
+  </div>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text)
+        .then(() => alert(`Disalin: ${text}`))
+        .catch(() => alert("Gagal menyalin"));
+    }
+  </script>
+</body>
+</html>
