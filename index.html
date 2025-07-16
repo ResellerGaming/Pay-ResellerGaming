@@ -85,10 +85,18 @@
 <body>
   <div class="welcome" id="welcome">
     <h1>Selamat datang di website pembayaran by ResellerGaming</h1>
-    <button onclick="document.getElementById('main').scrollIntoView({behavior: 'smooth'})">Lanjut Pembayaran</button>
-    <audio autoplay loop>
-      <source src="https://files.catbox.moe/aih943.mp3" type="audio/mpeg">
-    </audio>
+<audio id="bg-music" loop>
+  <source src="https://files.catbox.moe/aih943.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="startMusicAndScroll()">Lanjut Pembayaran</button>
+
+<script>
+  function startMusicAndScroll() {
+    document.getElementById('bg-music').play();
+    document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
   </div>
 
   <div id="main">
